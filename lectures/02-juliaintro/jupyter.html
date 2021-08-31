@@ -13077,25 +13077,25 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Jupyter-Notebook,-Jupyter-Lab,-and-JuliaBox">Jupyter Notebook, Jupyter Lab, and JuliaBox<a class="anchor-link" href="#Jupyter-Notebook,-Jupyter-Lab,-and-JuliaBox">&#182;</a></h1>
+<h1 id="Jupyter">Jupyter<a class="anchor-link" href="#Jupyter">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Jupyter-Notebook">Jupyter Notebook<a class="anchor-link" href="#Jupyter-Notebook">&#182;</a></h2><ul>
+<h2 id="Jupyter">Jupyter<a class="anchor-link" href="#Jupyter">&#182;</a></h2><ul>
 <li><p>IPython notebook (precursor of Jupyter notebook) is a powerful tool for authoring dynamic document in Python, which combines code, formatted text, math, and multimedia in a single document.</p>
 </li>
 <li><p><a href="http://jupyter.org">Jupyter</a> is the current development that emcompasses multiple languages including <strong>Ju</strong>lia, <strong>Pyt</strong>hon, and <strong>R</strong>.</p>
 </li>
-<li><p>Julia uses Jupyter notebook through the <a href="https://github.com/JuliaLang/IJulia.jl">IJulia.jl</a> package.</p>
+<li><p>In this course, you are required to write your homework reports using <a href="https://jupyter.org/install.html">Jupyter Lab</a>.</p>
 </li>
-<li><p>In this course, you are required to write your homework reports using IJulia.</p>
+<li><p>You can use Julia in Jupyter notebook through the <a href="https://github.com/JuliaLang/IJulia.jl">IJulia.jl</a> package.</p>
 </li>
-<li><p>For each homework, you need to submit your IJulia notebook (.e.g, <code>hw1.ipynb</code>), html (e.g., <code>hw1.html</code>), along with all code and data that are necessary to reproduce the results.</p>
+<li><p>For each homework, you need to submit your notebook (.e.g, <code>hw1.ipynb</code>), html (e.g., <code>hw1.html</code>), along with all code and data that are necessary to reproduce the results.</p>
 </li>
-<li><p>You can start with the Jupyter notebook for the lectures.</p>
+<li><p>You can start with this notebook file.</p>
 </li>
 </ul>
 
@@ -13105,14 +13105,26 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Installation">Installation<a class="anchor-link" href="#Installation">&#182;</a></h3><p>Installing the IJulia.jl package will install a minimal Python/Jupyter distribution that is private to Julia.</p>
-<div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Pkg</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;IJulia&quot;</span><span class="p">)</span>
-</pre></div>
-<p>We can also tell IJulia to use a Jupyter program already installed in our system:</p>
-<div class="highlight"><pre><span></span><span class="nb">ENV</span><span class="p">[</span><span class="s">&quot;JUPYTER&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;path_to_jupyter_executable&quot;</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="s">&quot;IJulia&quot;</span><span class="p">)</span>
-</pre></div>
+<h3 id="Anaconda">Anaconda<a class="anchor-link" href="#Anaconda">&#182;</a></h3><ul>
+<li><p><a href="https://www.anaconda.com">Anaconda</a> is a distribution of the Python and R programming languages for scientific computing, that aims to simplify package management and deployment. The distribution includes data-science packages suitable for Windows, Linux, and macOS. [<a href="https://en.wikipedia.org/wiki/Anaconda_(Python_distribution">Wikipedia</a>)]</p>
+</li>
+<li><p>Go to <a href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a> and clike "Download" to install the Anaconda.</p>
+</li>
+<li><p>From <a href="https://docs.anaconda.com/anaconda/navigator/index.html">Anaconda Navigator</a>, use can launch Jupyter Lab.</p>
+</li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Anaconda.Starting_page.png" align="center" width="800"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="IJulia">IJulia<a class="anchor-link" href="#IJulia">&#182;</a></h3><p>Install IJulia from the Julia REPL by pressing ] to enter pkg mode and entering:</p>
+
+<pre><code>add IJulia</code></pre>
+<p>If you already have Jupyter installed on your machine, this process will also install a kernel specification that tells Jupyter how to launch Julia.</p>
 
 </div>
 </div>
@@ -13121,16 +13133,6 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Usage">Usage<a class="anchor-link" href="#Usage">&#182;</a></h3><ul>
-<li><p>We can invoke Jupyter notebook within Julia by</p>
-<div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">IJulia</span>
-<span class="n">notebook</span><span class="p">()</span> <span class="c"># using home as working directory</span>
-</pre></div>
-<p>or, using current directory as the working directory, by</p>
-<div class="highlight"><pre><span></span><span class="n">notebook</span><span class="p">(</span><span class="n">dir</span><span class="o">=</span><span class="n">pwd</span><span class="p">())</span> <span class="c"># using current directory as working directory</span>
-</pre></div>
-</li>
-<li><p>Notebook can be stopped by hitting <code>Ctrl+c</code> in Julia REPL.</p>
-</li>
 <li><p>Useful to know some keyboard shortcuts. I frequently use</p>
 <ul>
 <li><code>shift + return</code>: execute current cell. </li>
@@ -13141,14 +13143,7 @@ div#notebook {
 Check more shortcuts in menu <code>Help</code> -&gt; <code>Keyboard Shortcuts</code>.</li>
 </ul>
 </li>
-<li><p><strong>Notebook extensions</strong> offer many utilities for productivity. They can be installed by</p>
-<div class="highlight"><pre><span></span><span class="c">#Pkg.add(&quot;Conda&quot;)</span>
-<span class="k">using</span> <span class="n">Conda</span>
-<span class="n">Conda</span><span class="o">.</span><span class="n">add_channel</span><span class="p">(</span><span class="s">&quot;conda-forge&quot;</span><span class="p">)</span>
-<span class="n">Conda</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;jupyter_contrib_nbextensions&quot;</span><span class="p">)</span>
-</pre></div>
-</li>
-<li><p>Notebook can be <strong>converted to other formats</strong> such as html, LaTeX, Markdown, Julia code, and many others, via menu <code>File</code> -&gt; <code>Download as</code>. For your homework, please submit both notebook (ipynb) and html.</p>
+<li><p>Notebook can be <strong>converted to other formats</strong> such as html, LaTeX, Markdown, Julia code, and many others, via menu <code>File</code> -&gt; <code>Download as</code>.</p>
 </li>
 <li><p><strong>Mathematical formula</strong> can can be typeset as LaTeX in Markdown cells. For example, inline math: $e^{i \pi} + 1 = 0$ and displayed math
 $$
@@ -13160,8 +13155,6 @@ For multiline displayed math:
   &amp;\approx&amp; 1 + x + \frac{x^2}{2}.
 \end{eqnarray*}</p>
 </li>
-<li><p>If you have a lot of commonly used LaTeX macros, put them in a <code>.tex</code> file and load them using the notebook extension <code>Load TeX macros</code>.</p>
-</li>
 </ul>
 
 </div>
@@ -13170,21 +13163,7 @@ For multiline displayed math:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="JupyterLab">JupyterLab<a class="anchor-link" href="#JupyterLab">&#182;</a></h2><p>JupyterLab (more IDE-like) is supposed to replace Jupyter Notebook after it reaches v1.0.</p>
-<p>To invoke JupyterLab:</p>
-<div class="highlight"><pre><span></span><span class="n">jupyterlab</span><span class="p">()</span> <span class="c"># use home as working directory</span>
-</pre></div>
-<p>or</p>
-<div class="highlight"><pre><span></span><span class="n">jupyterlab</span><span class="p">(</span><span class="n">dir</span><span class="o">=</span><span class="n">pwd</span><span class="p">())</span> <span class="c"># use current directory as working directory</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Acknowledgment">Acknowledgment<a class="anchor-link" href="#Acknowledgment">&#182;</a></h2><p>This lecture note is based on <a href="http://hua-zhou.github.io">Dr. Hua Zhou</a>'s 2019 Spring Statistical Computing course notes available at <a href="http://hua-zhou.github.io/teaching/biostatm280-2019spring/index.html">http://hua-zhou.github.io/teaching/biostatm280-2019spring/index.html</a>.</p>
+<h2 id="Acknowledgment">Acknowledgment<a class="anchor-link" href="#Acknowledgment">&#182;</a></h2><p>This lecture note has evolved from <a href="http://hua-zhou.github.io">Dr. Hua Zhou</a>'s 2019 Spring Statistical Computing course notes available at <a href="http://hua-zhou.github.io/teaching/biostatm280-2019spring/index.html">http://hua-zhou.github.io/teaching/biostatm280-2019spring/index.html</a>.</p>
 
 </div>
 </div>
