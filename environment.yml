@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+dependencies:
+  - matplotlib
+  - numpy
+  - r-base=4.0
+  - r-tidyverse

@@ -1,0 +1,347 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fullpage}
+\usepackage{lscape}
+\usepackage{color}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{url}
+\usepackage{setspace}
+\usepackage{enumitem}
+%\usepackage[authoryear]{natbib}
+%\usepackage[style=authoryear,natbib=true,isbn=false,doi=false]{biblatex}
+\usepackage[american]{babel}
+\usepackage[babel]{csquotes}
+\usepackage[natbib,authordate,backend=biber,isbn=false,doi=false,noibid]{biblatex-chicago}
+%\usepackage[authordate,backend=biber,isbn=false,doi=false,noibid]{biblatex-chicago}
+\usepackage{flexisym}
+
+% for natbib
+\def\cite{\citep}
+
+%% for biblatex
+%\def\cite{\parencite}
+%\def\citep{\parencite}
+%\def\citet{\textcite}
+%\def\citealt{\Cite}
+
+\renewcommand*{\bibfont}{\footnotesize}
+
+\allowdisplaybreaks
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+%\newtheorem{proof}{Proof}
+
+\DeclareMathOperator{\prox}{\bf prox}
+\DeclareMathOperator{\gra}{\bf gra}
+\DeclareMathOperator{\zer}{\bf zer}
+\DeclareMathOperator{\Fix}{\bf Fix}
+\DeclareMathOperator{\dom}{\bf dom}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Tr}{\bf Tr}
+\DeclareMathOperator{\Expect}{\bf E}
+\DeclareMathOperator{\Cov}{\bf Cov}
+\DeclareMathOperator{\Ind}{\bf 1}
+\newcommand{\ba}{\boldsymbol{a}}
+\newcommand{\bb}{\boldsymbol{b}}
+\newcommand{\bc}{\boldsymbol{c}}
+\newcommand{\bd}{\boldsymbol{d}}
+\newcommand{\be}{\boldsymbol{e}}
+\newcommand{\bff}{\boldsymbol{f}}
+\newcommand{\bg}{\boldsymbol{g}}
+\newcommand{\bh}{\boldsymbol{h}}
+\newcommand{\bi}{\boldsymbol{i}}
+\newcommand{\bj}{\boldsymbol{j}}
+\newcommand{\bk}{\boldsymbol{k}}
+\newcommand{\bl}{\boldsymbol{l}}
+\newcommand{\bm}{\boldsymbol{m}}
+\newcommand{\bn}{\boldsymbol{n}}
+\newcommand{\bo}{\boldsymbol{o}}
+\newcommand{\bp}{\boldsymbol{p}}
+\newcommand{\bq}{\boldsymbol{q}}
+\newcommand{\br}{\boldsymbol{r}}
+\newcommand{\bs}{\boldsymbol{s}}
+\newcommand{\bt}{\boldsymbol{t}}
+\newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\bw}{\boldsymbol{w}}
+\newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\by}{\boldsymbol{y}}
+\newcommand{\bz}{\boldsymbol{z}}
+\newcommand{\bA}{\boldsymbol{A}}
+\newcommand{\bB}{\boldsymbol{B}}
+\newcommand{\bC}{\boldsymbol{C}}
+\newcommand{\bD}{\boldsymbol{D}}
+\newcommand{\bE}{\boldsymbol{E}}
+\newcommand{\bF}{\boldsymbol{F}}
+\newcommand{\bG}{\boldsymbol{G}}
+\newcommand{\bH}{\boldsymbol{H}}
+\newcommand{\bI}{\boldsymbol{I}}
+\newcommand{\bJ}{\boldsymbol{J}}
+\newcommand{\bK}{\boldsymbol{K}}
+\newcommand{\bL}{\boldsymbol{L}}
+\newcommand{\bM}{\boldsymbol{M}}
+\newcommand{\bN}{\boldsymbol{N}}
+\newcommand{\bO}{\boldsymbol{O}}
+\newcommand{\bP}{\boldsymbol{P}}
+\newcommand{\bQ}{\boldsymbol{Q}}
+\newcommand{\bR}{\boldsymbol{R}}
+\newcommand{\bS}{\boldsymbol{S}}
+\newcommand{\bT}{\boldsymbol{T}}
+\newcommand{\bU}{\boldsymbol{U}}
+\newcommand{\bV}{\boldsymbol{V}}
+\newcommand{\bW}{\boldsymbol{W}}
+\newcommand{\bX}{\boldsymbol{X}}
+\newcommand{\bY}{\boldsymbol{Y}}
+\newcommand{\bZ}{\boldsymbol{Z}}
+\newcommand{\balpha}{\boldsymbol{\alpha}}
+\newcommand{\bbeta}{\boldsymbol{\beta}}
+\newcommand{\bgamma}{\boldsymbol{\gamma}}
+\newcommand{\bdelta}{\boldsymbol{\delta}}
+\newcommand{\bepsilon}{\boldsymbol{\epsilon}}
+\newcommand{\blambda}{\boldsymbol{\lambda}}
+\newcommand{\bmu}{\boldsymbol{\mu}}
+\newcommand{\bnu}{\boldsymbol{\nu}}
+\newcommand{\bphi}{\boldsymbol{\phi}}
+\newcommand{\bpi}{\boldsymbol{\pi}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}
+\newcommand{\btheta}{\boldsymbol{\theta}}
+\newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\bxi}{\boldsymbol{\xi}}
+\newcommand{\bGamma}{\boldsymbol{\rho}}
+\newcommand{\bDelta}{\boldsymbol{\Delta}}
+\newcommand{\bTheta}{\boldsymbol{\Theta}}
+\newcommand{\bLambda}{\boldsymbol{\Lambda}}
+\newcommand{\bXi}{\boldsymbol{\Xi}}
+\newcommand{\bPi}{\boldsymbol{\Pi}}
+\newcommand{\bOmega}{\boldsymbol{\Omega}}
+\newcommand{\bUpsilon}{\boldsymbol{\Upsilon}}
+\newcommand{\bPhi}{\boldsymbol{\Phi}}
+\newcommand{\bPsi}{\boldsymbol{\Psi}}
+\newcommand{\bSigma}{\boldsymbol{\Sigma}}
+
+\title{Gauss Elimination and LU Decomposition Example}
+\author{Joong-Ho Won, Computational Statistics, SNU}
+%\date{Advanced Statistical Computing}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\onehalfspacing
+
+\begin{center}
+\begin{tabular}{l|l}
+System of equations
+&
+Associated matrices
+\\
+\parbox{8cm}{%
+	\begin{align*}
+	2x_1 - 4x_2 + 2x_3 &= 6  \tag{1} \\
+	4x_1 - 9x_2 + 7x_3 &= 20 \tag{2} \\
+	2x_1 +  x_2 + 3x_3 &= 14 \tag{3}
+	\end{align*}%
+}
+&
+\parbox{8cm}{%
+\[
+	\underbrace{%
+	\begin{bmatrix}
+	2 & -4 & 2 \\
+	4 & -9 & 7 \\
+	2 &  1 & 3 	
+	\end{bmatrix}%
+	}_{A}
+\]%
+}
+\\
+\hline
+(Step 1) &  \\
+(2\textprime) = (2) - (1)$\times$ 2; (1\textprime)=(1); (3\textprime)=(3)
+&
+(2) = 2$\times$(1) + 1$\times$(2\textprime); (1)=(1\textprime); (3)=(3\textprime)
+\\
+\parbox{8cm}{%
+	\begin{align*}
+	2x_1 - 4x_2 + 2x_3 &= 6  \tag{1\textprime} \\
+	     -  x_2 + 3x_3 &= 8 \tag{2\textprime} \\
+	2x_1 +  x_2 + 3x_3 &= 14 \tag{3\textprime}
+	\end{align*}%
+}
+&
+\parbox{8cm}{%
+\[
+	\underbrace{%
+	\begin{bmatrix}
+	2 & -4 & 2 \\
+	4 & -9 & 7 \\
+	2 &  1 & 3 	
+	\end{bmatrix}%
+	}_{A}
+	= 
+	\underbrace{%
+	\begin{bmatrix}
+	1 & 0 & 0 \\
+	2 & 1 & 0 \\
+	0 & 0 & 1 	
+	\end{bmatrix}
+	}_{L_1}
+	\underbrace{%
+	\begin{bmatrix}
+	2 & -4 & 2 \\
+	0 & -1 & 3 \\
+	2 &  1 & 3 	
+	\end{bmatrix}%
+	}_{A\textprime}
+\]%
+}
+\\
+\hline
+(Step 2) &  \\
+(3\textprime\textprime) = (3\textprime) - (1\textprime)$\times$ 1; (1\textprime\textprime)=(1\textprime); (2\textprime\textprime)=(2\textprime)
+&
+(3\textprime) = 1$\times$(1\textprime) + 1$\times$(3\textprime\textprime); (1\textprime)=(1\textprime\textprime); (2\textprime)=(2\textprime\textprime)
+\\
+\parbox{8cm}{%
+	\begin{align*}
+	2x_1 - 4x_2 + 2x_3 &= 6  \tag{1\textprime\textprime} \\
+	     -  x_2 + 3x_3 &= 8 \tag{2\textprime\textprime} \\
+	       5x_2 +  x_3 &= 8 \tag{3\textprime\textprime}
+	\end{align*}%
+}
+&
+\parbox{8cm}{%
+\begin{align*}
+	\underbrace{%
+	\begin{bmatrix}
+	2 & -4 & 2 \\
+	0 & -1 & 3 \\
+	2 &  1 & 3 	
+	\end{bmatrix}%
+	}_{A\textprime}
+	&= 
+	\underbrace{%
+	\begin{bmatrix}
+	1 & 0 & 0 \\
+	0 & 1 & 0 \\
+	1 & 0 & 1 	
+	\end{bmatrix}
+	}_{L_2}
+	\underbrace{%
+	\begin{bmatrix}
+	2 & -4 & 2 \\
+	0 & -1 & 3 \\
+	0 &  5 & 1 	
+	\end{bmatrix}%
+	}_{A\textprime\textprime}
+\end{align*}%
+}
+\\
+\end{tabular}
+\end{center}
+
+\newpage
+
+\begin{center}
+\begin{tabular}{r|l}
+(Step 3) &  \\
+(3\textprime\textprime\textprime) = (3\textprime\textprime) - (2\textprime\textprime)$\times$ (-5); (1\textprime\textprime\textprime)=(1\textprime\textprime); (2\textprime\textprime\textprime)=(2\textprime\textprime)
+&
+(3\textprime\textprime) = -5$\times$(2\textprime\textprime) + $\times$(3\textprime\textprime\textprime); (1\textprime\textprime)=(1\textprime\textprime\textprime); (2\textprime\textprime)=(2\textprime\textprime\textprime)
+\\
+\parbox{8cm}{%
+	\begin{align*}
+	2x_1 - 4x_2 + 2x_3 &= 6  \tag{1\textprime\textprime\textprime} \\
+	     -  x_2 + 3x_3 &= 8 \tag{2\textprime\textprime\textprime} \\
+	             16x_3 &= 48 \tag{3\textprime\textprime\textprime}
+	\end{align*}%
+}
+&
+\parbox{8cm}{%
+\begin{align*}
+	\underbrace{%
+	\begin{bmatrix}
+	2 & -4 & 2 \\
+	0 & -1 & 3 \\
+	0 &  5 & 1 	
+	\end{bmatrix}%
+	}_{A\textprime\textprime}
+	&= 
+	\underbrace{%
+	\begin{bmatrix}
+	1 &  0 & 0 \\
+	0 &  1 & 0 \\
+	0 & -5 & 1 	
+	\end{bmatrix}
+	}_{L_3}
+	\underbrace{%
+	\begin{bmatrix}
+	2 & -4 & 2 \\
+	0 & -1 & 3 \\
+	0 &  0 & 16	
+	\end{bmatrix}%
+	}_{A\textprime\textprime\textprime}
+\end{align*}%
+}
+\\
+\end{tabular}
+\end{center}
+
+Thus
+\begin{align*}
+	A &= L_1 A\textprime \\
+	  &= L_1 L_2 A\textprime\textprime \\
+	  &= L_1 L_2 L_3 A\textprime\textprime\textprime \\
+	  &=
+	\begin{bmatrix}
+	1 & 0 & 0 \\
+	2 & 1 & 0 \\
+	0 & 0 & 1 	
+	\end{bmatrix}
+	\begin{bmatrix}
+	1 & 0 & 0 \\
+	0 & 1 & 0 \\
+	1 & 0 & 1 	
+	\end{bmatrix}
+	\begin{bmatrix}
+	1 &  0 & 0 \\
+	0 &  1 & 0 \\
+	0 & -5 & 1 	
+	\end{bmatrix}
+	\begin{bmatrix}
+	2 & -4 & 2 \\
+	0 & -1 & 3 \\
+	0 &  0 & 16	
+	\end{bmatrix}%
+	  &=
+	  \underbrace{%
+	  \begin{bmatrix}
+	  1 & 0 & 0 \\
+	  2 & 1 & 0 \\
+	  1 & -5 & 1
+	  \end{bmatrix}%
+	  }_{L}
+	  \underbrace{%
+	\begin{bmatrix}
+	2 & -4 & 2 \\
+	0 & -1 & 3 \\
+	0 &  0 & 16	
+	\end{bmatrix}%
+	}_{U}
+	.
+\end{align*}
+			
+\end{document}
+
