@@ -46,7 +46,7 @@ The course will be graded based on the following components:
 
 - **Attendance** (10%): Mandatory.
 - **Assignments** (65%): You will be assigned 4 homework assignments to be completed using Julia regularly throughout class. 
-- **Final project** (25%): The project will be a reproduction of the code and results in a recent computational statistics research paper chosen *in Julia* by yourself. The ideas for projects will be provided towards the midpoint of the semester.
+- **Final project** (25%): The project will be a reproduction of the code and results in a recent computational statistics research paper chosen by yourself *in Julia* . The ideas for projects will be provided towards the midpoint of the semester.
 
 ### Schedule
 
@@ -54,7 +54,7 @@ The following schedule is tentative, and is subject to change over the course.
 
 | Week | Topic | Assignment | Due Date |
 | --- | --- | --- | --- | 
-| 1 (9/1)      | [Introduction](./lectures/01-intro/intro.html), [Julia Intro I](https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/02-juliaintro/juliaintro1.ipynb) [[notebook](./lectures/02-juliaintro/juliaintro1.ipynb)] | [Jupyter](https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/02-juliaintro/juliaplots.ipynb)) [noteboo](./lectures/02-juliaintro/jupyter.ipynb), [Plotting](https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/02-juliaintro/juliaplots.ipynb) [[notebook](./lectures/02-juliaintro/juliaplots.ipynb)] | [Homework 1]<!--(./hw/hw1/hw01.html) [[notebook](./hw/hw1/hw01.ipynb)]-->  |  | 
+| 1 (9/1)      | [Introduction](./lectures/01-intro/intro.html), [Julia Intro I](https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/02-juliaintro/juliaintro1.ipynb) [[notebook](./lectures/02-juliaintro/juliaintro1.ipynb)] | [Jupyter](https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/02-juliaintro/jupyter.ipynb)) [noteboo](./lectures/02-juliaintro/jupyter.ipynb), [Plotting](https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/02-juliaintro/juliaplots.ipynb) [[notebook](./lectures/02-juliaintro/juliaplots.ipynb)], [Homework 1]<!--(./hw/hw1/hw01.html) [[notebook](./hw/hw1/hw01.ipynb)]-->  |  | 
 | 2 (9/6, 9/8)     | [Julia Intro II](https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/02-juliaintro/juliaintro2.ipynb) [[notebook](./lectures/02-juliaintro/juliaintro2.ipynb)] | 2021-09-26 |
 | 3 (9/13, 9/15)    | [Computer Arithmetic]<!--(https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/03-arith/arith.ipynb) [[notebook](./lectures/03-arith/arith.ipynb)]--> |  |  |
 | 4 (9/20, 9/22)    | [Computer Arithmetic]<!--(https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/03-arith/arith.ipynb) [[notebook](./lectures/03-arith/arith.ipynb)]-->, [Algorithm]<!--(https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/04-algo/algo.ipynb) [[notebook](./lectures/04-algo/algo.ipynb)]--> |  |  |
