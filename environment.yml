@@ -5,3 +5,4 @@ dependencies:
   - numpy
   - r-base=4.0
   - r-tidyverse
+  - r-microbenchmark 
