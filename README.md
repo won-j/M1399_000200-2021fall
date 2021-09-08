@@ -4,6 +4,7 @@ This is the course website for M1399.000200: "Advanced Statistical Computing " a
 
 ## Announcements
 
+* 2021-09-08: Homework 1 has been posted.
 * 2021-09-07: R package microbenchmark has been installed to the interactive lecture note `Julia Intro 1`. Now you can run all the cells online.
 * 2021-09-01: course will be given online. Mostly real-time, but sometimes pre-recorded.
 
@@ -56,7 +57,7 @@ The following schedule is tentative, and is subject to change over the course.
 | Week | Topic | Assignment | Due Date |
 | --- | --- | --- | --- | 
 | 1 (9/1)      | [Introduction](./lectures/01-intro/intro.html), [Julia Intro I](https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/02-juliaintro/juliaintro1.ipynb) [[notebook](./lectures/02-juliaintro/juliaintro1.ipynb)] | [Jupyter](https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/02-juliaintro/jupyter.ipynb) [[notebook](./lectures/02-juliaintro/jupyter.ipynb)], [Plotting](https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/02-juliaintro/juliaplots.ipynb) [[notebook](./lectures/02-juliaintro/juliaplots.ipynb)]  |  | 
-| 2 (9/6, 9/8)     | [Julia Intro II](https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/02-juliaintro/juliaintro2.ipynb) [[notebook](./lectures/02-juliaintro/juliaintro2.ipynb)] | [Homework 1]<!--(./hw/hw1/hw01.html) [[notebook](./hw/hw1/hw01.ipynb)]--> | 2021-09-26 |
+| 2 (9/6, 9/8)     | [Julia Intro II](https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/02-juliaintro/juliaintro2.ipynb) [[notebook](./lectures/02-juliaintro/juliaintro2.ipynb)] | [Homework 1](./hw/hw1/hw01.html) [[notebook](./hw/hw1/hw01.ipynb)] | 2021-09-26 |
 | 3 (9/13, 9/15)    | [Computer Arithmetic](https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/03-arith/arith.ipynb) [[notebook](./lectures/03-arith/arith.ipynb)] |  |  |
 | 4 (9/20, 9/22)    | [Computer Arithmetic]<!--(https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/03-arith/arith.ipynb) [[notebook](./lectures/03-arith/arith.ipynb)]-->, [Algorithm]<!--(https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/04-algo/algo.ipynb) [[notebook](./lectures/04-algo/algo.ipynb)]--> |  |  |
 | 5 (9/27, 9/29)    | Numerical Linear Algebra: [intro]<!--(https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/05-numalgintro/numalgintro.ipynb) [[notebook](./lectures/05-numalgintro/numalgintro.ipynb)]-->, [triangular systems]<!--(https://mybinder.org/v2/gh/won-j/M1399_000200-2021fall/master?filepath=lectures/06-trisys/trisys.ipynb) [[notebook](./lectures/06-trisys/trisys.ipynb)]--> | [Homework 2]<!--(./hw/hw2/hw02.html) [[notebook](./hw/hw2/hw02.ipynb)]--> | 2021-10-17  |
