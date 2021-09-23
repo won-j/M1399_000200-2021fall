@@ -4,6 +4,7 @@ This is the course website for M1399.000200: "Advanced Statistical Computing " a
 
 ## Announcements
 
+* 2021-09-23: HW1, Q4 has been clarified. Use the update notebook.
 * 2021-09-22: Lecture notes on Computer Arithmetic and Algorithms have been updated. If you downloaded the notes before, try it again.
 * 2021-09-08: Homework 1 has been posted.
 * 2021-09-07: R package microbenchmark has been installed to the interactive lecture note `Julia Intro 1`. Now you can run all the cells online.
