@@ -13,7 +13,7 @@ In large-scale optimization, often the objective function or its derivatives can
 
 * Chen, X., J. D. Lee, X. T. Tong, and Y. Zhang (2020). "Statistical inference for model parameters in stochastic gradient descent," Annals of Statistics, 48(1), 251–273.
 
-* Zhu, W., X. Chen, and W. B. Wu (2021). "Online Covariance Matrix Estimation in Stochastic Gradient Descent," arXiv:2002.03979v2 [stat.ML], available at https://arxiv.org/abs/2002.03979v2.
+* Zhu, W., X. Chen, and W. B. Wu (2021). "Online Covariance Matrix Estimation in Stochastic Gradient Descent," arXiv:2002.03979v2 [stat.ML], available at <https://arxiv.org/abs/2002.03979v2>.
 
 ## Optimal Design
 
@@ -36,10 +36,10 @@ Model selection is a difficult statistical problem with an exponential complexit
 <!--* Dedieu, Antoine, Hussein Hazimeh, and Rahul Mazumder (2021). "Learning Sparse Classifiers: Continuous and Mixed Integer Optimization Perspectives." Journal of Machine Learning Research 22(135), 1-47.-->
 
 * Hastie, Trevor, Robert Tibshirani, and Ryan Tibshirani (2020). "Best subset, forward stepwise or lasso? Analysis and recommendations based on extensive comparisons." Statistical Science 35(4), 579-592.
-	+ R code available at https://github.com/ryantibs/best-subset/
+	+ R code available at <https://github.com/ryantibs/best-subset/>
 
 * Lee, Sokbae, Yuan Liao, Myung Hwan Seo, and Youngki Shin (2021). "Factor-driven two-regime regression." Annals of Statistics 49(3), 1656-1678.
-	+ R code available at https://github.com/yshin12/fadtwo
+	+ R code available at <https://github.com/yshin12/fadtwo>
 
 <!--
 ## Fused lasso and total variation penalty
