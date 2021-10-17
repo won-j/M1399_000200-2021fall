@@ -4,6 +4,7 @@ BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
 COSMO = "1e616198-aa4e-51ec-90a2-23f7fbd31d8d"
 Convex = "f65535da-76fb-5f13-bab9-19810c17039a"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Debugger = "31a5f54b-26ea-5ae9-a837-f05ce5417438"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 ECOS = "e2685f51-7e38-5353-a97d-a921fd2c8199"
 ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
@@ -38,4 +39,4 @@ UnicodePlots = "b8865327-cd53-5732-bb35-84acbb429228"
 WebIO = "0f1e0344-ec1d-5b48-a673-e5cf874b6c29"
 
 [compat]
-julia = "1.4"
+julia = "1.6"
