@@ -4,6 +4,7 @@ This is the course website for M1399.000200: "Advanced Statistical Computing " a
 
 ## Announcements
 
+* 2021-11-13: HW3 Q5 instruction has changed.
 * 2021-11-01: HW3 has been posted. Due is 2021-11-16.
 * 2021-10-16: Lecture notes on eigenvalue decomposition has been updated. Please downloaded the latest version.
 * 2021-10-17: Project instruction has been posted. Proposal due is ~~2021-10-25~~ 2021-10-28.
